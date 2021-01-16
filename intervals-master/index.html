@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="window">
+        <div class="title">
+            <h2>Операції над інтервалами</h2>
+        </div>
+        <div class="row-1">
+            <div class="interval">
+                <p>Інтервал А</p>
+                <div class="intervalBody">
+                    <input class="numInput" type="number" id="a1">
+                    <input class="numInput" type="number" id="a2">
+                </div>
+
+
+            </div>
+            <div class="interval">
+                <p>Інтервал B</p>
+                <div class="intervalBody">
+                    <input class="numInput" type="number" id="b1">
+                    <input class="numInput" type="number" id="b2">
+                </div>
+            </div>
+
+            <div class="results">
+                <p>Результат :</p>
+                <a class="btn" href="#">Результат в А</a>
+                <a class="btn" href="#">Результат в B</a>
+
+            </div>
+        </div>
+        <div class="row-2">
+            <form class="operations">
+                <ul class="operation-1">
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="sum">
+                        <label for="sum">Додавання</label>
+                    </li>
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="sub">
+                        <label for="sub">Віднімання</label>
+                    </li>
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="multy">
+                        <label for="mult">Множення</label>
+                    </li>
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="divs-1">
+                        <label for="divs-1">Ділення</label>
+                    </li>
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="divs-2">
+                        <label for="divs-2">Ділення (гіпотеза) </label>
+                    </li>
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="show-a">
+                        <label for="show-a">Відображення А</label>
+                    </li>
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="max">
+                        <label for="max">Максимум</label>
+                    </li>
+                </ul>
+                <ul class="operation-2">
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="sumToA">
+                        <label for="sumToA">Додавання до A</label>
+                    </li>
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="subFromB">
+                        <label for="subFromB">Віднімання від B</label>
+                    </li>
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="multTo">
+                        <label for="multTo">Множення A на число</label>
+                    </li>
+                    <li class="checkbox-group">
+                        <input type="checkbox" id="divsTo">
+                        <label for="divsTo">Ділення B на число</label>
+                    </li>
+                    <li class="checkbox-group">
+
+                        <input type="checkbox" id="multyMode">
+                        <label for="multyMode">Множення декількох інтервалів</label>
+                    </li>
+                    <li class="checkbox-group">
+
+                        <input type="checkbox" id="inv">
+                        <label for="inv">Інверсія B</label>
+                    </li>
+                    <li class="checkbox-group">
+
+                        <input type="checkbox" id="min">
+                        <label for="min">Мінімум</label>
+                    </li>
+
+
+                </ul>
+                <div class="operation-3">
+                    <input type="number" id="inp-sumToA">
+                    <input type="number" id="inp-subFromB">
+                    <input type="number" id="inp-multTo">
+                    <input type="number" id="inp-divsTo">
+                </div>
+
+            </form>
+            <div class="graphic">
+
+            </div>
+        </div>
+        <div class="footer">
+            <button id="calculate" class="btn">Обрахувати</button>
+            <button class="btn">Закрити</button>
+
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
