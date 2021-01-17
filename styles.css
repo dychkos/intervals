@@ -20,14 +20,14 @@ body{
     position: relative;
     
 }
-.checkbox-group {
+.radio-group {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
   }
   
-  .checkbox-group:not(:last-of-type) {
+  .radio-group:not(:last-of-type) {
     margin-bottom: 10px;
   }  
  
@@ -43,6 +43,44 @@ body{
 a{
     text-decoration: dashed;
 }
+
+.radio{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.radio__input{
+    display: none;
+}
+
+.radio__radio{
+    width: 1.25em;
+    height: 1.25em;
+    border:2px solid #000000;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+
+}
+.radio__radio::after{
+    content:"";
+    width:100%;
+    height:100%;
+    display: block;
+    background-color: #836483;
+    border-radius: 50%;
+
+    transform:scale(0);
+    transition: transform 0.1s ease-in;
+}
+
+.radio__input:checked + .radio__radio::after{
+    transform:scale(1);
+}
+
 .btn{
     background: #191a29;
     padding: 8px;
@@ -95,6 +133,17 @@ input{
     width: 60px;
     height: 20px;
     margin-bottom: 4px;
+}
+.goal-result{
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    background: rgb(178, 173, 240);
+}
+canvas{
+    margin: 15px;
 }
 .footer{
     display: flex;    

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,20 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="window">
-        <div class="title"><h2>Операції над інтервалами</h2></div>
-        <div class="row-1">          
+        <div class="title">
+            <h2>Операції над інтервалами</h2>
+        </div>
+        <div class="row-1">
             <div class="interval">
                 <p>Інтервал А</p>
                 <div class="intervalBody">
                     <input class="numInput" type="number" id="a1">
                     <input class="numInput" type="number" id="a2">
                 </div>
-                
+
 
             </div>
             <div class="interval">
@@ -27,87 +31,135 @@
                     <input class="numInput" type="number" id="b1">
                     <input class="numInput" type="number" id="b2">
                 </div>
-            </div>                
-            
+            </div>
+
             <div class="results">
                 <p>Результат :</p>
                 <a class="btn" href="#">Результат в А</a>
-                <a class="btn" href="#">Результат в B</a>       
+                <a class="btn" href="#">Результат в B</a>
 
-            </div>  
+            </div>
         </div>
         <div class="row-2">
-            <form class="operations">
+            <form class="operations" >                
                 <ul class="operation-1">
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="sum">
-                        <label for="sum">Додавання</label>
+                    
+                    <li class="radio-group">
+                        <label for="sum" class="radio">
+                            <input type="radio" id="sum"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                                Додавання
+                        </label>                        
                     </li>
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="sub">
-                        <label for="sub">Віднімання</label>
+                    <li class="radio-group">
+                        <label for="sub" class="radio">
+                            <input type="radio" id="sub"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                                Віднімання
+                        </label>   
+                        
                     </li>
-                    <li class="checkbox-group">                        
-                        <input type="checkbox" id="mult">
-                        <label for="mult">Множення</label>
+                    <li class="radio-group">
+                        <label for="multy" class="radio">
+                            <input type="radio" id="multy"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Множення
+                        </label>                          
                     </li>
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="divs-1">
-                        <label for="divs-1">Ділення</label>
+                    <li class="radio-group">
+                        <label for="divs1" class="radio">
+                            <input type="radio" id="divs1"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Ділення
+                        </label>  
+                       
                     </li>
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="divs-2">
-                        <label for="divs-2">Ділення 2</label>
+                    <li class="radio-group">
+                        <label for="divs2" class="radio">
+                            <input type="radio" id="divs2"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Ділення (гіпотеза)
+                        </label>                          
                     </li>
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="show-a">
-                        <label for="show-a">Відображення А</label>
+                    <li class="radio-group">
+                        <label for="showA" class="radio">
+                            <input data-check="forA"  type="radio" id="showA"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Відображення А
+                        </label>    
                     </li>
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="max">
-                        <label for="max">Максимум</label> 
-                    </li>                                
+
+                    <li class="radio-group">
+                        <label for="max" class="radio">
+                            <input type="radio" id="max"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Максимум
+                        </label>   
+                        
+                    </li>
                 </ul>
                 <ul class="operation-2">
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="sumToA">
-                        <label for="sumToA">Додавання до A</label>
+                    <li class="radio-group">
+                        <label for="sumToA" class="radio">
+                            <input   data-check="forA" type="radio" id="sumToA"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Додавання до A
+                        </label> 
+
                     </li>
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="subFromB">
-                    <label for="subFromB">Віднімання від B</label>
-                    </li>
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="multTo">
-                    <label for="multTo">Множення A на число</label>
-                    </li>
-                    <li class="checkbox-group">
-                        <input type="checkbox" id="divsTo">
-                    <label for="divsTo">Ділення B на число</label>
-                    </li>
-                    <li class="checkbox-group">
-                         
-                        <input type="checkbox" id="multyMode">
-                        <label for="multyMode">Множення декількох інтервалів</label>
-                    </li>
-                    <li class="checkbox-group">
+                    <li class="radio-group">
+                        <label for="subFromB" class="radio">
+                            <input data-check="forB" type="radio" id="subFromB"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Віднімання від B
+                        </label> 
                         
-                        <input type="checkbox" id="inv">
-                        <label for="inv">Інверсія B</label>
                     </li>
-                    <li class="checkbox-group">
-                        
-                        <input type="checkbox" id="min">
-                        <label for="min">Мінімум</label> 
-                    </li>                   
-                    
-                                      
+                    <li class="radio-group">
+                        <label for="multTo" class="radio">
+                            <input data-check="forA"  type="radio" id="multTo"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Множення A на число
+                        </label>                       
+                    </li>
+                    <li class="radio-group">
+                        <label for="divsTo" class="radio">
+                            <input data-check="forB" type="radio" id="divsTo"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Ділення B на число
+                        </label>
+
+                    </li>
+                    <li class="radio-group">
+                        <label for="multyMode" class="radio">
+                            <input type="radio" id="multyMode"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Множення декількох інтервалів
+                        </label>
+                    </li>
+
+                    <li class="radio-group">
+                        <label for="inv" class="radio">
+                            <input data-check="forB" type="radio" id="inv"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Інверсія B
+                        </label>
+                      
+                    </li>
+                    <li class="radio-group">
+                        <label for="min" class="radio">
+                            <input type="radio" id="min"  name="radioField" class="radio__input">
+                            <div class="radio__radio"></div>
+                            Мінімум
+                        </label>
+                    </li>
                 </ul>
+
                 <div class="operation-3">
-                    <input  type="number" id="inp-sumToA">                    
-                    <input  type="number" id="inp-subFromB">                  
-                    <input  type="number" id="inp-multTo">                    
-                    <input type="number" id="inp-divsTo">
+                    <input class="extra-input" type="number" disabled id="inp-sumToA">
+                    <input class="extra-input" type="number" disabled id="inp-subFromB">
+                    <input class="extra-input" type="number" disabled id="inp-multTo">
+                    <input class="extra-input" type="number" disabled id="inp-divsTo">
                 </div>
 
             </form>
@@ -116,11 +168,19 @@
             </div>
         </div>
         <div class="footer">
-            <button class="btn">Обрахувати</button>
+            <button id="calculate" class="btn">Обрахувати</button>
             <button class="btn">Закрити</button>
 
+        </div>
+        <div class="goal-result">results :
+            <span id="forResult"></span>
+            <canvas id="canvas1">You broswer dont expe</canvas>
+            <canvas id="canvas2">You broswer dont expe</canvas>
+            <canvas id="canvas3">You broswer dont expe</canvas>
+            
         </div>
     </div>
 </body>
 <script src="main.js"></script>
+
 </html>
