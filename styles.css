@@ -1,140 +1,181 @@
-*{
+* {
     margin: 0;
     padding: 0;
-
 }
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     min-height: 500px;
+    background:linear-gradient(to right top,#65dfc9,#6cdbeb);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.window{
+
+.window {
     width: 800px;
-    height: 500px;
-    background: #ececec;
+    height: 500px;  
+    background:linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.4));
     display: flex;
     flex-direction: column;
     position: relative;
-    
+    border-radius:15px;
+    backdrop-filter: blur(2rem);
+
+    z-index: 3;
+}
+
+.circle1,.circle2{
+    background:linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    height: 180px;
+    width:180px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+
+}
+.circle1{
+    top:5%;
+    right:5%;
+}
+.circle2{
+    bottom:5%;
+    left:7%;
 }
 .radio-group {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-  }
-  
-  .radio-group:not(:last-of-type) {
+}
+
+.radio-group:not(:last-of-type) {
     margin-bottom: 10px;
-  }  
- 
-.title{
-    padding: 8px;
 }
- 
-.row-1{
+
+.title {
+    text-align: center;
+    color:rgb(29, 19, 19);    
+    padding: 14px;
+}
+.title h2{
+    letter-spacing: 4px;
+    font-weight: 300;
+}
+
+.row-1 {
     display: flex;
-    justify-content:space-between;
-    background: #d4d4d4;
+    justify-content: space-around;
+    background: rgba(101, 223, 201,0.4);
 }
-a{
+
+a {
     text-decoration: dashed;
 }
 
-.radio{
+.radio {
     display: inline-flex;
     align-items: center;
     cursor: pointer;
     margin-right: 10px;
 }
 
-.radio__input{
+.radio__input {
     display: none;
 }
 
-.radio__radio{
+.radio__radio {
     width: 1.25em;
     height: 1.25em;
-    border:2px solid #000000;
+    border: 2px solid #000000;
     border-radius: 50%;
     margin-right: 10px;
     box-sizing: border-box;
     padding: 2px;
-
 }
-.radio__radio::after{
-    content:"";
-    width:100%;
-    height:100%;
-    display: block;
-    background-color: #836483;
-    border-radius: 50%;
 
-    transform:scale(0);
+.radio__radio::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #65dfc9;
+    border-radius: 50%;
+    transform: scale(0);
     transition: transform 0.1s ease-in;
 }
 
-.radio__input:checked + .radio__radio::after{
-    transform:scale(1);
+.radio__input:checked+.radio__radio::after {
+    transform: scale(1);
 }
 
-.btn{
-    background: #191a29;
+.btn {
+ 
+    background-color: #2cd1eb;    
+    box-shadow: 12px 12px 45px -32px rgba(0, 0, 0, 0.75);
     padding: 8px;
     color: #fff;
     border: none;
     font-size: 15px;
-    display: block;    
+    display: block;
     margin-left: 12px;
-    cursor:pointer;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
 
+.btn:hover {
+    background-color: #6a7cac;
 }
-.btn:hover{
-    background-color: #6a6dac;
-}
-.intervalBody{
+
+.intervalBody {
     display: flex;
 }
-.interval{
+
+.interval {
     margin: 15px;
 }
-.numInput{
+
+.numInput {
     margin-right: 4px;
+    margin-top: 15px;
+    
 }
-.results{    
+
+.results {
     display: flex;
     align-items: center;
     margin-right: 15px;
 }
-a{
-   min-height: 20px;
 
+a {
+    min-height: 20px;
 }
-.operations{
+
+.operations {
     padding: 10px;
-    border-radius: 12px;
-    border: 1px solid rgb(175, 175, 175);
-}
-
-.operations{
     display: flex;
     margin: 15px;
+    border-radius: 12px;
+    border: 3px solid rgba(108, 219, 235,0.7);
 }
-.operation-1,.operation-2,.operation-3{
+
+
+.operation-1,
+.operation-2,
+.operation-3 {
     display: flex;
     flex-direction: column;
 }
-input{
+
+input {
     display: block;
     width: 60px;
     height: 20px;
     margin-bottom: 4px;
 }
-.goal-result{
+
+.goal-result {
     width: 250px;
     height: 500px;
     position: absolute;
@@ -142,12 +183,26 @@ input{
     bottom: 10px;
     background: rgb(178, 173, 240);
 }
-canvas{
+
+canvas {
     margin: 15px;
 }
-.footer{
-    display: flex;    
-    position: absolute;
-    bottom: 25px;
-    
+
+.graphics {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculate-btn{
+    display: inline-block;
+    margin-top: 20px;
+    width: 280px;
+    padding: 13px;
+    font-size: 15px;
+}
+.footer {
+    width:100%;
+    text-align: center;;
 }
